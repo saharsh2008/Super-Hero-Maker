@@ -99,3 +99,40 @@ function myKeydown(e) {
     }
 
 }
+
+function up() {
+    if (playerY >= 0) {
+        playerY = playerY - heroHeight;
+        console.log("Block Image Height = " + heroHeight);
+        console.log("x pos =" + playerX + " y pos =" + playerY);
+        canvas.remove(playerObject);
+        playerUpdate();
+    }
+}
+function down() {
+    if (playerY <= 500) {
+        playerY = playerY + heroHeight;
+        console.log("Block Image Height = " + heroHeight);
+        console.log("x pos =" + playerX + " y pos =" + playerY);
+        canvas.remove(playerObject);
+        playerUpdate();
+    }
+}
+function left() {
+    if (playerX >= 0) {
+        playerX = playerX - heroWidth;
+        console.log("Block Image Width = " + heroWidth);
+        console.log("x pos =" + playerX + " y pos =" + playerY);
+        canvas.remove(playerObject);
+        playerUpdate();
+    }
+}
+function right() {
+    if (playerX <= 850) {
+        playerX = playerX + heroWidth;
+        console.log("Block Image Width = " + heroWidth);
+        console.log("x pos =" + playerX + " y pos =" + playerY);
+        canvas.remove(playerObject);
+        playerUpdate();
+    }
+}
